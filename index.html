@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
+    />
+    <!-- icon -->
+
+    <!-- Custom style Sheet & JavaScript -->
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+    <title>| Ecommerce Website</title>
+  </head>
+  <body>
+    <div class="loader">
+      <header>
+        <nav id="nav-bar">
+          <div class="navigator">
+            <div class="logo">
+              <h1 class="logo-left">Light<span class="logo-right">House</span></h1>
+            </div>
+            <i class='bx bx-menu' id="hamburger"></i>
+            <i class='bx bx-menu-close' id="close-menu"></i>
+            <div class="nav-links" id="nav-links">
+              <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="product.html">Shop</a>
+                <!-- <a href="">Detail</a> -->
+                <a href="about.html">About Us</a>
+                <a href="blog.html">Blog</a>
+                <a href="contactus.html">Contact Us</a>
+              </div>
+              <div class="nav-right">
+                <a href="#" id="login-link">Login</a>
+                <div class="search-container">
+                  <input type="text" placeholder="Search..." class="search-input">
+                  <i class='bx bx-search'></i>
+                </div>
+                <i class='bx bx-cart-add'></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-section slider-section">
+        <div class="slider-images">
+          <img class="slider-img active" src="/image/mus.png" alt="Slide 1">
+          <img class="slider-img" src="/image/w.png" alt="Slide 2">
+          <img class="slider-img" src="/image/image1.png" alt="Slide 3">
+        </div>
+        <div class="slider-content">
+          <h1 class="main-headline">Welcome to LightHouse</h1>
+          <p class="main-desc">Discover the best tech products at unbeatable prices. Shop now and enjoy fast delivery!</p>
+        </div>
+      </main>
+      <p><h1 class="exec">Meet Our Executives</h1></p>
+      
+
+      <div class="products-container"></div>
+ <p><h1 class="exec">GALLERY</h1></p>
+ <main class="main2-section slider2-section">
+  <div class="slider2-images">
+          <img class="slider2-img Active" src="/image/Harr.jpg" alt="Slide 1">
+          <img class="slider2-img" src="/image/jo.jpg" alt="Slide 2">
+          <img class="slider2-img" src="/image/fad.jpg" alt="Slide 3">
+        </div>
+          </div>
+      </main>
+      <!-- Footer area -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>LightHouse</h3>
+            <p>Km21 Yandev Gboko.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: support@lighthouse.com</p>
+            <p>Phone: +234 803 4204 065</p>
+            <div class="footer-social">
+              <a href="#"><i class='bx bxl-facebook'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+              <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 LightHouse. All rights reserved.
+        </div>
+      </footer>
+
+      <!-- Login area -->
+      <!-- Login Form Modal -->
+      <div id="login_form" class="login-modal" style="display:none;">
+        <div class="login-modal-content">
+          <span id="close-login" class="close-login" style="cursor:pointer;">&times;</span>
+          <h2>Login</h2>
+          <form>
+            <input type="text" placeholder="Username or Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit" class="add-to-cart-btn" style="width:100%;">Login</button>
+          </form>
+          <p style="margin-top:1rem;">Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </div>
+      </div>
+
+      <!-- Register Form Modal -->
+      <div id="register_form" class="login-modal" style="display:none;">
+        <div class="login-modal-content">
+          <span id="close-register" class="close-login" style="cursor:pointer;">&times;</span>
+          <h2>Register</h2>
+          <form>
+            <input type="text" placeholder="Username" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required minlength="8"><br>
+            <input type="password" placeholder="Confirm Password" required minlength="8"><br>
+            <button type="submit" class="add-to-cart-btn" style="width:100%;">Register</button>
+          </form>
+          <p style="margin-top:1rem;">Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
