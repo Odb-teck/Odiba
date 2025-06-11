@@ -1,0 +1,109 @@
+.contact-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(34,47,62,0.12);
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-container {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1 1 260px;
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.contact-info h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.contact-details p {
+  margin: 0.7rem 0;
+  color: #333;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-details .footer-social {
+  margin-top: 1.2rem;
+}
+
+.contact-form {
+  flex: 2 1 340px;
+  max-width: 400px;
+  background: linear-gradient(135deg, rgba(10,189,227,0.10) 0%, rgba(72,219,251,0.08) 100%);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(10,189,227,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form h2 {
+  margin-bottom: 1rem;
+  color: var(--navy);
+  font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #0abde3;
+  background: rgba(255,255,255,0.18);
+  color: #222;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid #48dbfb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10,189,227,0.15);
+  background: rgba(255,255,255,0.28);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--primary, #0abde3);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .contact-section {
+    padding: 1.5rem 0.5rem;
+    margin: 1rem 0.2rem;
+  }
+  .contact-form {
+    max-width: 100%;
+  }
+}
