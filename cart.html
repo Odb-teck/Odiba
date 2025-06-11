@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart | LightHouse Ecommerce</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+
+  <!-- JavaScript -->
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+  <div class="loader">
+    <!-- Header -->
+    <header>
+      <nav id="nav-bar">
+        <div class="navigator">
+          <div class="logo">
+            <h1 class="logo-left">Light<span class="logo-right">House</span></h1>
+          </div>
+          <i class='bx bx-menu' id="hamburger"></i>
+          <i class='bx bx-menu-close' id="close-menu"></i>
+          <div class="nav-links" id="nav-links">
+            <div class="nav-left">
+              <a href="index.html">Home</a>
+              <a href="product.html">Shop</a>
+              <a href="about.html">About Us</a>
+              <a href="blog.html">Blog</a>
+              <a href="contactus.html">Contact Us</a>
+            </div>
+            <div class="nav-right">
+              <a href="#" id="login-link">Login</a>
+              <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class='bx bx-search'></i>
+              </div>
+              <a href="cart.html"><i class='bx bx-cart-add'></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main-section cart-section">
+      <h1 class="main-headline">Your Cart</h1>
+      <div id="cart-items"></div>
+      <div id="cart-total" style="margin:1.5rem 0; font-weight:bold;"></div>
+      <button id="checkout-btn" class="add-to-cart-btn" style="width:100%;max-width:320px;display:none;">Proceed to Payment</button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>LightHouse</h3>
+          <p>Km21 Yandev Gboko.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: support@lighthouse.com</p>
+          <p>Phone: +234 803 4204 065</p>
+          <div class="footer-social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 LightHouse. All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="login_form" class="login-modal" style="display:none;">
+    <div class="login-modal-content">
+      <span id="close-login" class="close-login" style="cursor:pointer;">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username or Email" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button type="submit" class="add-to-cart-btn" style="width:100%;">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cart Script -->
+  <script>
+    const formatter = new Intl.NumberFormat('en-NG', {
+      style: 'currency',
+      currency: 'NGN',
+    });
+
+    function getCart() {
+      return JSON.parse(localStorage.getItem('cart')) || [];
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      const cart = getCart();
+      const itemsDiv = document.getElementById('cart-items');
+      const totalDiv = document.getElementById('cart-total');
+      const checkoutBtn = document.getElementById('checkout-btn');
+
+      if (cart.length === 0) {
+        itemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+        totalDiv.textContent = '';
+        checkoutBtn.style.display = 'none';
+      } else {
+        itemsDiv.innerHTML = cart.map((item, idx) => `
+          <div class="cart-item">
+            <img src="${item.img}" alt="${item.name}" class="cart-item-img">
+            <div class="cart-item-details">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-price">${formatter.format(item.price)} x 
+                <button class="qty-btn" data-idx="${idx}" data-action="dec">-</button>
+                <span class="cart-item-qty">${item.qty}</span>
+                <button class="qty-btn" data-idx="${idx}" data-action="inc">+</button>
+              </div>
+            </div>
+            <div class="cart-item-total">${formatter.format(item.price * item.qty)}</div>
+            <button class="remove-btn" data-idx="${idx}" title="Remove">&times;</button>
+          </div>
+        `).join('');
+        const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        totalDiv.textContent = `Total: ${formatter.format(total)}`;
+        checkoutBtn.style.display = 'block';
+      }
+    }
+
+    // Event delegation
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('qty-btn')) {
+        const idx = +e.target.dataset.idx;
+        const action = e.target.dataset.action;
+        let cart = getCart();
+        if (action === 'inc') cart[idx].qty += 1;
+        if (action === 'dec' && cart[idx].qty > 1) cart[idx].qty -= 1;
+        saveCart(cart);
+        renderCart();
+      }
+      if (e.target.classList.contains('remove-btn')) {
+        const idx = +e.target.dataset.idx;
+        let cart = getCart();
+        cart.splice(idx, 1);
+        saveCart(cart);
+        renderCart();
+      }
+      if (e.target.id === 'close-login') {
+        document.getElementById('login_form').style.display = 'none';
+      }
+    });
+
+    // Checkout button
+    document.getElementById('checkout-btn').addEventListener('click', function () {
+      alert('Proceeding to payment...');
+      // Payment gateway integration point
+    });
+
+    // Initial cart render
+    renderCart();
+  </script>
+</body>
+</html>
