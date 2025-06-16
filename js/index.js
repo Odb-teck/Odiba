@@ -3,25 +3,25 @@ const products = [
     Name: "Eng. Chibuikem Nwagu",
     Description: "Senior Technology Consultant with 10+ years of experience architecting and delivering scalable web, cloud, and IoT solutions.",
     Amount: 120.00,
-    Image: "/image/chi.jpg"
+    Image: "image/chi.jpg"
   },
   {
     Name: "Eng. Taye Otaru Peter",
     Description: "Senior Electrical and Electronics Consultant with 10+ years of experience.",
     Amount: 85.00,
-    Image: "/image/taye.jpg"
+    Image: "image/taye.jpg"
   },
   {
     Name: "Miss Tope Victoria Sunday",
     Description: "Senior Quality Assurance Consultant with 5+ years experience in electronics",
     Amount: 45.00,
-    Image: "/image/tope.jpg"
+    Image: "image/tope.jpg"
   },
   {
     Name: "Eng. Onigba Harrison Ogheneyoma",
     Description: "Senior Technical Consultant with 10+ years of experience.",
     Amount: 35.00,
-    Image: "/image/Harr.jpg"
+    Image: "image/Harr.jpg"
   }
 ];
 

@@ -3,145 +3,145 @@ const products = [
     Name: "Wireless Headphones",
     Description: "High-quality wireless headphones with noise cancellation and long battery life.",
     Amount: 120.00,
-    Image: "/image/p-1.png"
+    Image: "image/p-1.png"
   },
   {
     Name: "Smart Watch",
     Description: "Stylish smart watch with fitness tracking and message notifications.",
     Amount: 85.00,
-    Image: "/image/p12.png"
+    Image: "image/p12.png"
   },
   {
     Name: "Bluetooth Speaker",
     Description: "Portable Bluetooth speaker with deep bass and 12-hour playtime.",
     Amount: 45.00,
-    Image: "/image/mus.png"
+    Image: "image/mus.png"
   },
   {
     Name: "Gaming Mouse",
     Description: "Ergonomic gaming mouse with customizable DPI and RGB lighting.",
     Amount: 35.00,
-    Image: "/image/news-1.png"
+    Image: "image/news-1.png"
   },
   {
     Name: "Laptop",
     Description: "Lightweight laptop with 8GB RAM, 512GB SSD, and a vivid display.",
     Amount: 650.00,
-    Image: "/image/laptop.png"
+    Image: "image/laptop.png"
   },
   {
     Name: "PS5 with pad",
     Description: "Professional Playstation 5 with pad sensor.",
     Amount: 499.99,
-    Image: "/image/gam.png"
+    Image: "image/gam.png"
   },
    {
     Name: "Wireless Headphones",
     Description: "High-quality wireless headphones with noise cancellation and long battery life.",
     Amount: 120.00,
-    Image: "/image/image1.png"
+    Image: "image/image1.png"
   },
   {
     Name: "Smart Watch",
     Description: "Stylish smart watch with fitness tracking and message notifications.",
     Amount: 95.00,
-    Image: "/image/w.png"
+    Image: "image/w.png"
   },
   {
     Name: "Bluetooth Speaker",
     Description: "Portable Bluetooth speaker with deep bass and 12-hour playtime.",
     Amount: 45.00,
-    Image: "/image/mus.png"
+    Image: "image/mus.png"
   },
   {
     Name: "Visual Gaming Mouse",
     Description: "Ergonomic gaming mouse with customizable DPI and RGB lighting.",
     Amount: 135.00,
-    Image: "/image/man2.png"
+    Image: "image/man2.png"
   },
   {
     Name: "Laptop",
     Description: "Lightweight laptop with 8GB RAM, 512GB SSD, and a vivid display.",
     Amount: 650.00,
-    Image: "/image/p10.png"
+    Image: "image/p10.png"
   },
   {
     Name: "DSLR Camera",
     Description: "Professional DSLR camera with 24MP sensor and 4K video recording.",
     Amount: 499.99,
-    Image: "/image/images.jfif"
+    Image: "image/images.jfif"
   },
   {
     Name: "Wireless Headphones",
     Description: "High-quality wireless headphones with noise cancellation and long battery life.",
     Amount: 120.00,
-    Image: "/image/p-1.png"
+    Image: "image/p-1.png"
   },
   {
     Name: "Smart Watch",
     Description: "Stylish smart watch with fitness tracking and message notifications.",
     Amount: 85.00,
-    Image: "/image/p-2.jpg"
+    Image: "image/p-2.jpg"
   },
   {
     Name: "Bluetooth Speaker",
     Description: "Portable Bluetooth speaker with deep bass and 12-hour playtime.",
     Amount: 45.00,
-    Image: "/image/mus.png"
+    Image: "image/mus.png"
   },
   {
     Name: "Drone",
     Description: "Ergonomic Drone with customizable DPI and RGB lighting.",
     Amount: 35.00,
-    Image: "/image/i1.png"
+    Image: "image/i1.png"
   },
   {
     Name: "Laptop",
     Description: "Lightweight laptop with 8GB RAM, 512GB SSD, and a vivid display.",
     Amount: 650.00,
-    Image: "/image/laptop.png"
+    Image: "image/laptop.png"
   },
   {
     Name: "DSLR Camera",
     Description: "Professional DSLR camera with 24MP sensor and 4K video recording.",
     Amount: 499.99,
-    Image: "/image/images.jfif"
+    Image: "image/images.jfif"
   },
    {
     Name: "Wireless Headphones",
     Description: "High-quality wireless headphones with noise cancellation and long battery life.",
     Amount: 120.00,
-    Image: "/image/p-3.jpg"
+    Image: "image/p-3.jpg"
   },
   {
     Name: "Smart Watch",
     Description: "Stylish smart watch with fitness tracking and message notifications.",
     Amount: 185.00,
-    Image: "/image/news-2.png"
+    Image: "image/news-2.png"
   },
   {
     Name: "Bluetooth Speaker",
     Description: "Portable Bluetooth speaker with deep bass and 12-hour playtime.",
     Amount: 45.00,
-    Image: "/image/mus.png"
+    Image: "image/mus.png"
   },
   {
     Name: "Playstation 5",
     Description: "Ergonomic gaming station with customizable DPI and RGB lighting.",
     Amount: 475.00,
-    Image: "/image/news-1.png"
+    Image: "image/news-1.png"
   },
   {
     Name: "Laptop",
     Description: "Lightweight laptop with 8GB RAM, 512GB SSD, and a vivid display.",
     Amount: 550.00,
-    Image: "/image/laptop.png"
+    Image: "image/laptop.png"
   },
   {
     Name: "DSLR Camera",
     Description: "Professional DSLR camera with 24MP sensor and 4K video recording.",
     Amount: 499.99,
-    Image: "/image/i1.png"
+    Image: "image/i1.png"
   }
 ];
 
