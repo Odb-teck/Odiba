@@ -72,40 +72,6 @@ slides.forEach((slide, idx) => {
 });
 slides[0].classList.add('active');
 
-// Image slider
-const Slides = document.querySelectorAll('.slider2-img');
-let Current = 0;
-let Prev = Slides.length - 1;
-
-function showSlide(Next) {
-  Slides[Prev].classList.remove('Prev');
-  Slides[Current].classList.remove('Active');
-  Slides[Current].style.left = '100%';
-
-  Prev = Current;
-  Current = Next;
-
-  Slides[Prev].classList.add('Prev');
-  Slides[Prev].style.left = '-100%';
-  Slides[Current].classList.add('Active');
-  Slides[Current].style.left = '0';
-}
-
-setInterval(() => {
-  let Next = (Current + 1) % Slides.length;
-  showSlide(Next);
-}, 5000);
-
-// Initialize positions
-Slides.forEach((Slide, idx) => {
-  Slide.style.left = idx === 0 ? '0' : '100%';
-});
-Slides[0].classList.add('Active');
-
-
-
-
-
 // Show login modal
 document.getElementById("login-link").onclick = function(e) {
   e.preventDefault();
@@ -155,3 +121,23 @@ closeMenu.addEventListener('click', () => {
   closeMenu.classList.remove('active');
   hamburger.classList.remove('hide');
 });
+
+const track = document.querySelector('.gallery-track');
+const images = document.querySelectorAll('.gallery-img');
+const prevBtn = document.querySelector('.gallery-btn.prev');
+const nextBtn = document.querySelector('.gallery-btn.next');
+let index = 0;
+
+function updateGallery() {
+  track.style.transform = `translateX(-${index * 600}px)`;
+}
+
+prevBtn.onclick = () => {
+  index = (index - 1 + images.length) % images.length;
+  updateGallery();
+};
+
+nextBtn.onclick = () => {
+  index = (index + 1) % images.length;
+  updateGallery();
+};
