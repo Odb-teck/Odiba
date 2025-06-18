@@ -585,3 +585,31 @@ header {
     min-height: 220px;
   }
 }
+
+.gallery-container {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  margin: auto;
+}
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.gallery-img {
+  width: 600px;
+  flex-shrink: 0;
+}
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.gallery-btn.prev { left: 10px; }
+.gallery-btn.next { right: 10px; }
